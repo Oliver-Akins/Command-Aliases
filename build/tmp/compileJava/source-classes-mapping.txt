@@ -1,4 +1,0 @@
-oliver/cmdAliases/commands/InfoCommand.java
- oliver.cmdAliases.commands.InfoCommand
-oliver/cmdAliases/CommandAliasesPlugin.java
- oliver.cmdAliases.CommandAliasesPlugin
