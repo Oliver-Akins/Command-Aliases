@@ -9,10 +9,14 @@ import systems.conduit.main.core.commands.BaseCommand;
 public class InfoCommand extends BaseCommand {
 	@Override
 	public LiteralArgumentBuilder<CommandSourceStack> getCommand() {
-		return Commands.literal("info").executes(ctx -> {
-			TextComponent response = new TextComponent("CommandAliases -> Hello there");
-			ctx.getSource().sendSuccess(response, false);
-			return 1;
-		});
+		return Commands
+				.literal("CA")
+				.then(Commands.literal("info")
+						.executes(source -> {
+							TextComponent response = new TextComponent("CommandAliases -> Hello there");
+							source.getSource().sendSuccess(response, false);
+							return 1;
+						})
+				);
 	}
 }
